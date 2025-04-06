@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="window" id="mainWindow">
+        <div class="window-header">
+            <span class="window-title">Romantic Message</span>
+            <div class="window-controls">
+                <button class="control-button">⏻</button>
+                <button class="control-button">◻</button>
+                <button class="control-button" onclick="closeWindow()">❌</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="sidebar">
+            </div>
+            <div class="content">
+                <div class="message">
+                    <h2>About Us</h2>
+                    <p>Salam, Ana Bilal w Kanbghi wahd lbnt smitha Fatimzhra.</p>
+                    <p>7li l Message w 9rayh.</p>
+                </div>
+                <div class="pictures" id="pictures"></div>
+                <button class="action-button" onclick="closeWindow()">Cancel</button>
+                <button class="action-button" onclick="openNewPage()">Open</button>
+            </div>
+        </div>
+        <div class="window-footer">
+            <p>( Made with Love )</p>
+        </div>
+    </div>
+
+    <div class="window" id="newPage" style="display: none;">
+        <div class="window-header">
+            <span class="window-title">Profile</span>
+            <div class="window-controls">
+                <button class="control-button">⏻</button>
+                <button class="control-button">◻</button>
+                <button class="control-button" onclick="closeWindow()">❌</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="profile">
+                <div class="profile-picture">
+                    <img src="profile.jpg" alt="Profile Picture">
+                    <div class="kiss-effect"></div>
+                </div>
+                <div class="profile-details">
+                    <div class="profile-heading">
+                        <span class="profile-name">cr iohobi</span>
+                        <span class="profile-status">slight lb giamgri</span>
+                    </div>
+                    <div class="profile-info">
+                        <p>berry <span class="profile-info-detail">Salam, Fatimazahra, kanbghik a a7sen bnt "Love You Too Much"</span></p>
+                        <p>likes <span class="profile-info-detail">Every moment with you feels special. Your presence brings so much joy to my life, and I’m truly grateful for you. I just wanted to let you know how much you mean to me. You are my happiness and my heart’s peace. ❤️</span></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

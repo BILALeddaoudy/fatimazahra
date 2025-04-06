@@ -1,0 +1,220 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFC0CB; /* Light pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.window {
+    background-color: white;
+    border: 2px solid #FFB6C1; /* Light pink border */
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.window-header {
+    background-color: #FFB6C1; /* Light pink header */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.window-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+}
+
+.window-controls .control-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+.window-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.picture-placeholder {
+    width: 45%;
+    cursor: pointer;
+}
+
+.picture-placeholder img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.picture-placeholder img:hover {
+    transform: scale(1.05);
+}
+
+.content {
+    width: 100%;
+}
+
+.message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+}
+
+.pictures {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pictures img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.pictures img.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.action-button {
+    background-color: #FFB6C1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+.window-footer {
+    background-color: #FFB6C1;
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-picture {
+    position: relative;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #FFB6C1;
+    margin-bottom: 20px;
+}
+
+.kiss-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-image: url('kiss.png');
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: kiss 1s ease-in-out forwards;
+}
+
+@keyframes kiss {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+.profile-details {
+    background-color: #fff;
+    border: 2px solid #FFB6C1;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+}
+
+.profile-heading {
+    margin-bottom: 20px;
+}
+
+.profile-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    display: block;
+}
+
+.profile-status {
+    font-size: 1em;
+    color: #888;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-info p {
+    margin: 10px 0;
+}
+
+.profile-info-detail {
+    display: block;
+    margin-left: 10px;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 600px) {
+    .window-body {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 30%;
+        flex-direction: column;
+        border-right: 2px solid #FFB6C1;
+    }
+
+    .picture-placeholder {
+        width: 100%;
+    }
+
+    .content {
+        width: 70%;
+        padding-left: 20px;
+    }
+}
